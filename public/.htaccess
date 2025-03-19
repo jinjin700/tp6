@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+  Options +FollowSymlinks -Multiviews
+  RewriteEngine On
+
+  # 设置 RewriteBase（根据项目路径调整）
+  # 如果项目在根目录，保持默认
+  # 如果项目在子目录（如 /tp6），改为 RewriteBase /tp6/public/
+  RewriteBase /
+
+  # 隐藏 index.php
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.*)$ index.php?/$1 [QSA,PT,L]
+</IfModule>

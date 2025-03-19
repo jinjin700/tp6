@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>权限错误</title>
+    <link rel="stylesheet" href="/static/layui/css/layui.css">
+</head>
+<body>
+<div style="padding: 20px;">
+    <div class="layui-card">
+        <div class="layui-card-header">操作受限</div>
+        <div class="layui-card-body">
+            <i class="layui-icon layui-icon-face-cry" style="font-size: 30px;"></i>
+            <span style="font-size: 16px;">{$msg}</span>
+            <div style="margin-top:20px;">
+                <a href="/" class="layui-btn layui-btn-primary">返回首页</a>
+                {if $Think.session.user.role_id == 0}
+                    <a href="/login" class="layui-btn">用户登录</a>
+                {/if}
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

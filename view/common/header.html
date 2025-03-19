@@ -1,0 +1,11 @@
+<div class="layui-header">
+    <div class="layui-logo">{:config('app.name')}</div>
+    <ul class="layui-nav layui-layout-right">
+        <li class="layui-nav-item">
+            <a href="javascript:;">{:session('user.name')}</a>
+            <dl class="layui-nav-child">
+                <dd><a href="{:url('/logout')}">退出登录</a></dd>
+            </dl>
+        </li>
+    </ul>
+</div>

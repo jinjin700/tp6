@@ -1,0 +1,15 @@
+<div class="layui-side layui-bg-black">
+    <div class="layui-side-scroll">
+        <ul class="layui-nav layui-nav-tree" lay-filter="menu">
+            {volist name="menuData" id="menu"}
+            <li class="layui-nav-item {$menu.active ? 'layui-this' : ''}">
+                <a href="{$menu.href|default='javascript:;'}">
+                    <i class="{$menu.icon}"></i>
+                    <cite>{$menu.title}</cite>
+                </a>
+                <!-- 子菜单结构保持不变 -->
+            </li>
+            {/volist}
+        </ul>
+    </div>
+</div>

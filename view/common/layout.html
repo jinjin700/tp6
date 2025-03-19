@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{block name="title"}默认标题{/block}</title>
+    <link rel="stylesheet" href="/static/layui/css/layui.css">
+</head>
+<body class="layui-layout-body">
+    {include file="common/header"}
+    {include file="common/sidebar"}
+    
+    {block name="content"}{/block}
+    
+    {include file="common/footer"}
+
+    <script src="/static/layui/layui.js"></script>
+    <script>
+    layui.use(['element'], function(){
+        var element = layui.element;
+        element.init(); // 初始化导航组件
+    });
+    </script>
+</body>
+</html>
